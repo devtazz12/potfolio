@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+body{
+    background-color:rgb(31, 55, 79);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    position: relative;
+
+}
+body::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(40% at left 80%);
+}
+body::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(8, 42, 121), rgb(76, 189, 230));
+    clip-path: circle(20% at right 90%);
+}
+.navbar{
+    padding-top:20px;
+}
+.navbar a{
+    margin-left: 17%;
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+}
+.navbar a:hover{
+    color: #ee752f;
+    box-shadow: 5px 5px 8px #ee752f;
+    border-top: 1px solid rgb(176, 175, 175);
+    border-left: 0.5px solid rgb(197, 195, 195);
+}
+.content{
+    display: flex;
+}
+
+.dev_details{
+     
+    width: 70%;
+    height: 20vh;
+    margin-top: 2%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: crimson;
+}
+.dev_details h1{
+    width: 46%;
+    margin-left: 25%;
+    position: relative;
+    -webkit-text-stroke: 0.1vw rgb(31, 55, 79);
+    text-transform: uppercase;
+    color:rgb(31, 55, 79);
+    font-size: 35px;
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw rgb(92, 92, 119);
+    border-right:2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 10s linear infinite;   
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    50%,70%,90%
+    {
+        width: 100%;
+    }
+}
+.dev_details p span{
+    color: rgb(246, 237, 237);
+}
+.card1 button, .card2 button, .card3 button,
+.dev_details p button{
+    padding: 5px;
+    border-radius: 4px;
+    filter: drop-shadow(2px 2px 5px blue);
+    cursor: pointer;
+    color: rgb(13, 12, 12);
+    background-color: #ee752f;
+    font-weight: bold;
+    
+}
+
+
+.dev_photo img{
+    width: 250px;
+    height: 250px;
+    border-radius: 500px;
+    box-shadow: 2px 2px 80px rgb(123, 160, 198);
+    margin-left: 40px;
+    
+}
+
+.card1{
+    width: 17%;
+    height: 20rem;
+    background: rgba(213, 16, 16, 0.1);
+    margin-left: 100px;
+    box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 6px;
+    border-top: 1px solid rgb(176, 175, 175);
+    border-left: 0.5px solid rgb(197, 195, 195);
+}
+.card1 p{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 40%;
+    color: rgb(0, 255, 251);
+}
+.card1 button{
+   margin-left:35%;
+   margin-top: 30%;
+}
+.card2{
+    width: 17%;
+    height: 20rem;
+    background: rgba(213, 16, 16, 0.1);
+    margin-left: 100px;
+    box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 6px;
+    border-top: 1px solid rgb(176, 175, 175);
+    border-left: 0.5px solid rgb(197, 195, 195);
+}
+.card2 p{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 40%;
+    color: rgb(0, 255, 251);
+}
+.card2 button{
+   margin-left:35%;
+   margin-top: 30%;
+}
+.card3{
+    width: 17%;
+    height: 20rem;
+    background: rgba(213, 16, 16, 0.1);
+    margin-left: 100px;
+    box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 6px;
+    border-top: 1px solid rgb(176, 175, 175);
+    border-left: 0.5px solid rgb(197, 195, 195);
+}
+.card3 p{
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 40%;
+    color: rgb(0, 255, 251);
+}
+.card3 button{
+   margin-left:35%;
+   margin-top: 30%;
+}
+.containe{
+    display: flex;
+    position: relative;
+}
+
+@media (max-width: 500px){
+    .dev_photo img{
+        width: 100px;
+        height: 100px;
+    }
+    .dev_details h1{
+        font-size: 9px;
+        width: 60%;
+        margin-left: 50px;
+    }
+    .dev_details p{
+        font-size: 6px;
+    }
+    .card3{
+        display: none;
+    }
+    .card2{
+        display: none;
+    } 
+    .card1{ 
+       
+        width: 50%;
+      }
+    body::after{
+        display: none;
+    }   
+}
+@media (min-width: 500px) and (max-width: 652px){
+    .dev_photo img{
+        margin-top: 10px;
+        width: 150px;
+        height: 150px;
+    }
+    .dev_details h1{
+        font-size: 12px;
+        width: 75%;
+    }
+    .dev_details p{
+        font-size: 9px;
+    }
+    .card3{
+        display: none;
+    }
+    .card2{
+        display: none;
+    }
+    .card1{ 
+        margin-left: 35%;
+        width: 30%;
+      }
+
+}
+
+@media(min-width: 652px) and (max-width: 979px){
+    .dev_photo img{
+        margin-top: 10px;
+        width: 200px;
+        height: 200px;
+    }
+    .dev_details h1{
+        font-size: 15px;
+        width: 60%;
+    }
+    .dev_details p{
+        font-size: 12px;
+    }
+  .card3{
+    display: none;
+  }
+  .card2{
+    width: 25%;
+  }
+  .card1{ 
+    margin-left: 10%;
+    width: 25%;
+  }
+}
+
+@media (min-width: 979px) and (max-width: 1350px){
+    .dev_details h1{
+        font-size: 20px;
+        width: 50%;
+    }
+}
